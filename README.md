@@ -1,5 +1,7 @@
 # simple-socket-client
 一个简单的socket通信框架，适用场景：一请求一个响应，顺序执行的通信场景中
+![Alt text](https://github.com/fantao005x/simple-socket-client/raw/master/pic/框架说明.png)
+
 ```
 
 内部封装了，初始化、发送接受数据、以及请求队列和回调的处理
