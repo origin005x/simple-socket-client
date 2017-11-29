@@ -41,7 +41,7 @@ public class SocketApi {
     }
 
     public boolean isOk() {
-//        service ok
+//        todo service ok
         return commandHandler != null && commandHandler.isOK();
     }
 
