@@ -7,6 +7,7 @@ import com.origin.simple_socket.service.SocketApi;
 
 /**
  * Created by fantao on 2017/11/29.
+ * 业务请求实现类，在这里可以定义业务请求，然后调用通信框架发送
  */
 public class APICtrl {
     static SocketApi socketApi;

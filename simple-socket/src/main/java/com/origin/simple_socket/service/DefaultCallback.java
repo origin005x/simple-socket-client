@@ -5,4 +5,8 @@ package com.origin.simple_socket.service;
  * 便于以后扩展，特定义此类
  */
 public abstract class DefaultCallback implements Callback {
+    @Override
+    public long waitBeforeReadData() {
+        return 100;
+    }
 }

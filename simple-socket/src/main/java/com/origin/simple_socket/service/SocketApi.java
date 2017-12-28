@@ -87,18 +87,27 @@ public class SocketApi {
         }
     }
 
+    /**
+     * 检查队列处理线程是否激活
+     */
     public void checkConsumerThread() {
         if (consumeThread != null && consumeThread.getState() == Thread.State.NEW) {
             consumeThread.initAndStart();
         }
     }
 
+    /**
+     * 检查socket连接是否正常
+     */
     public void checkConnection() {
         if (commandHandler != null && !commandHandler.isOK()) {
             commandHandler.connect();
         }
     }
 
+    /**
+     * 停止
+     */
     public void stopSelf() {
         if (consumeThread != null) {
             consumeThread.stopSelf();

@@ -60,6 +60,10 @@ public final class CommandHandler {
                 callback(rst, socketOp);
                 return;
             }
+            // 读取之前需要等待一定时间，防止读取时数据还未回来就超时了，等待时间在callback中定义.也可以将读取超时时间设置长一点
+            if (socketOp.getCallback() != null && socketOp.getCallback().waitBeforeReadData() > 0) {
+                Thread.sleep(socketOp.getCallback().waitBeforeReadData());
+            }
             //如果写成功，则开始读取
             Rst rst = protocolAdapter.readRst(socketOp.getAction(), socketOp.getParams(), inputStream);
             callback(rst, socketOp);

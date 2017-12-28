@@ -21,12 +21,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100px"
         android:onClick="onTestClick"
-        android:text="测试1"/>
+        android:text="初始化"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100px"
         android:onClick="onTest2Click"
-        android:text="测试2"/>
+        android:text="发送请求"/>
 </LinearLayout>
